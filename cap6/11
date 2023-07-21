@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+    int T, P, N;
+
+    printf("Ingrese los valores de T, P y N: ");
+    scanf("%d %d %d", &T, &P, &N);
+
+    if (pow(T, 2) + pow(P, 2) == pow(N, 2))
+        printf("\nLas expresiones son iguales.");
+    else
+        printf("\nLas expresiones no son iguales.");
+
+    return 0;
+}
