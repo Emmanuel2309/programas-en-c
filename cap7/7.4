@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/* Declaración de cadenas de caracteres y asignación de valores. */
+
+void main(void) {
+    char *cad0;
+    cad0 = "Argentina"; /* La declaración y la asignación son correctas. */
+    puts(cad0);
+
+    cad0 = "Brasil"; /* Correcto. Se modifica el contenido de la posición en memoria a la que apunta la variable cad0 — apuntador de tipo cadena de caracteres. */
+    puts(cad0);
+
+    char cad1[100]; /* Se reserva espacio para la cadena de caracteres. */
+    gets(cad1); /* Correcto. Se puede leer una cadena de caracteres utilizando la función gets y asignarla a la variable cad1. */
+
+    char cad2[20] = "México"; /* Correcto. Se reserva espacio para la cadena de caracteres y se asigna un valor inicial. */
+    puts(cad2);
+
+    gets(cad2); /* El valor de una cadena (declarada como cadena[longitud]) se puede modificar por medio de lecturas o utilizando funciones de la biblioteca string.h. */
+    puts(cad2);
+
+    cad2[10] = 'G'; /* Incorrecto. No se puede asignar una cadena de caracteres directamente a un elemento de la cadena. Debería ser un carácter entre comillas simples 'G' en lugar de una cadena "Guatemala". */
+}
