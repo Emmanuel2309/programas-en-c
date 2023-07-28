@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+/* Incremento de precio. 
+El programa, al recibir como dato el precio de un producto, incrementa al
+mismo 11% si es menor a 1500$ y 8% en caso contrario (mayor o igual). 
+PRE y NPR: variables de tipo real. */
+void main(void)
+{
+    float PRE, NPR; // Declaración de las variables PRE y NPR de tipo real (número decimal)
+    
+    printf("Ingrese el precio del producto: "); // Muestra un mensaje para que el usuario ingrese el precio
+    scanf("%f", &PRE); // Lee el precio ingresado por el usuario y lo almacena en la variable PRE
+    
+    if (PRE < 1500) // Comprueba si el precio es menor a $1500
+    {
+        NPR = PRE * 1.11; // Si es menor a $1500, calcula el nuevo precio con el incremento del 11%
+    }
+    else
+    {
+        NPR = PRE * 1.08; // Si es mayor o igual a $1500, calcula el nuevo precio con el incremento del 8%
+    }
+    
+    printf("\nNuevo precio del producto: %8.2f", NPR); // Muestra el nuevo precio en pantalla con dos decimales
+}
