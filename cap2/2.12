@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+/* Igualdad de expresiones.
+El programa, al recibir como datos T, P y N, comprueba la igualdad de
+una expresión determinada.
+T, P y N: variables de tipo entero. */
+void main(void)
+{
+    int T, P, N; // Declaración de las variables T, P y N de tipo entero
+    
+    printf("Ingrese los valores de T, P y N: "); // Muestra un mensaje para que el usuario ingrese los valores de T, P y N
+    scanf("%d %d %d", &T, &P, &N); // Lee los valores ingresados por el usuario y los almacena en las variables T, P y N
+    
+    if (P != 0) // Comprueba si P es diferente de cero (para evitar una división por cero)
+    {
+        if (pow(T / P, N) == (pow(T, N) / pow(P, N))) // Comprueba si la expresión (T/P)^N es igual a (T^N)/(P^N)
+            printf("\nSe comprueba la igualdad"); // Si la igualdad se cumple, muestra en pantalla "Se comprueba la igualdad"
+        else
+            printf("\nNo se comprueba la igualdad"); // Si la igualdad no se cumple, muestra en pantalla "No se comprueba la igualdad"
+    }
+    else
+        printf("\nP tiene que ser diferente de cero"); // Si P es cero, muestra en pantalla "P tiene que ser diferente de cero"
+}
