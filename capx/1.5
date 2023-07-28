@@ -1,0 +1,21 @@
+#include <stdio.h>
+/* Aplicación de operadores. */
+void main(void)
+{
+    int i = 5, j = 7, k = 3, m1;
+    float x = 2.5, z = 1.8, t;
+    
+    m1 = ((j % k) / 2) + 1; // Calcula m1 usando el operador de módulo (%), la división (/) y la suma (+).
+    m1 += i; // Incrementa m1 sumándole el valor de i.
+    m1 %= --i; // Calcula el módulo de m1 usando el decremento de i (--i).
+    
+    printf("\nEl valor de m1 es: %d", m1); // Imprime el valor de m1.
+
+    t = ((float)(j % k) / 2); // Calcula t usando el operador de módulo (%), la división (/) y una conversión explícita a float.
+    t++; // Incrementa t en 1.
+
+    x *= ++z; // Calcula el producto de x y z después de incrementar z en 1.
+    t -= (x += ++i); // Realiza las operaciones de suma y resta de t y x después de incrementar i en 1.
+
+    printf("\nEl valor de t es: %.2f", t); // Imprime el valor de t con dos decimales de precisión.
+}
