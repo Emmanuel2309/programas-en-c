@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+/* Ventas descendentes.
+El programa, al recibir como datos tres valores que representan las ventas
+de los vendedores de una tienda de discos, escribe las ventas en
+orden descendente.
+P, S y R: variables de tipo real. */
+void main(void)
+{
+    float P, S, R; // Declaración de las variables P, S y R de tipo real (número decimal)
+    
+    printf("\nIngrese las ventas de los tres vendedores: "); // Muestra un mensaje para que el usuario ingrese las ventas
+    scanf("%f %f %f", &P, &S, &R); // Lee las ventas ingresadas por el usuario y las almacena en las variables P, S y R
+    
+    if (P > S) // Comprueba si P es mayor que S
+    {
+        if (P > R) // Si P es mayor que S y mayor que R, P es el mayor de los tres valores
+        {
+            if (S > R) // Si S es mayor que R, P > S > R, por lo tanto se muestra el orden P, S y R
+                printf("\n\nEl orden es P, S y R: %8.2f %8.2f %8.2f", P, S, R);
+            else // Si R es mayor que S, P > R > S, por lo tanto se muestra el orden P, R y S
+                printf("\n\nEl orden es P, R y S: %8.2f %8.2f %8.2f", P, R, S);
+        }
+        else // Si P no es mayor que R, P > S, pero R > P, por lo tanto se muestra el orden R, P y S
+            printf("\n\nEl orden es R, P y S: %8.2f %8.2f %8.2f", R, P, S);
+    }
+    else // Si P no es mayor que S, S > P
+    {
+        if (S > R) // Si S es mayor que R y P, S es el mayor de los tres valores
+        {
+            if (P > R) // Si P es mayor que R, S > P > R, por lo tanto se muestra el orden S, P y R
+                printf("\n\nEl orden es S, P y R: %8.2f %8.2f %8.2f", S, P, R);
+            else // Si R es mayor que P, S > R > P, por lo tanto se muestra el orden S, R y P
+                printf("\n\nEl orden es S, R y P: %8.2f %8.2f %8.2f", S, R, P);
+        }
+        else // Si S no es mayor que R, S > P, pero R > S, por lo tanto se muestra el orden R, S y P
+            printf("\n\nEl orden es R, S y P: %8.2f %8.2f %8.2f", R, S, P);
+    }
+}
