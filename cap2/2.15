@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+/* Spa.
+El programa, al recibir como datos el tipo de tratamiento, la edad y el número de días de internación de un cliente en un spa, calcula el costo total del tratamiento.
+TRA, EDA, DIA: variables de tipo entero.
+COS: variable de tipo real. */
+void main(void)
+{
+    int TRA, EDA, DIA; // Declaración de las variables TRA, EDA y DIA de tipo entero
+    float COS; // Declaración de la variable COS de tipo real (número decimal)
+    
+    printf("Ingrese tipo de tratamiento, edad y días: "); // Muestra un mensaje para que el usuario ingrese el tipo de tratamiento, la edad y los días de internación
+    scanf("%d %d %d", &TRA, &EDA, &DIA); // Lee los valores ingresados por el usuario y los almacena en las variables TRA, EDA y DIA
+    
+    switch(TRA) // Estructura switch para evaluar la variable TRA (tipo de tratamiento)
+    {
+        case 1: COS = DIA * 2800; break; // Si TRA es igual a 1, calcula el costo según la fórmula: COS = DIA * 2800
+        case 2: COS = DIA * 1950; break; // Si TRA es igual a 2, calcula el costo según la fórmula: COS = DIA * 1950
+        case 3: COS = DIA * 2500; break; // Si TRA es igual a 3, calcula el costo según la fórmula: COS = DIA * 2500
+        case 4: COS = DIA * 1150; break; // Si TRA es igual a 4, calcula el costo según la fórmula: COS = DIA * 1150
+        default: COS = -1; break; // Si TRA no coincide con ningún caso, establece el valor de COS en -1 para indicar una clave incorrecta de tratamiento
+    }
+    
+    if (COS != -1) // Si COS es diferente de -1, es decir, si la clave de tratamiento es válida
+    {
+        if (EDA >= 60) // Si la edad es mayor o igual a 60 años
+            COS = COS * 0.75; // Aplica un descuento del 25% al costo total del tratamiento
+        else if (EDA <= 25) // Si la edad es menor o igual a 25 años
+            COS = COS * 0.85; // Aplica un descuento del 15% al costo total del tratamiento
+        
+        printf("\nClave tratamiento: %d\t Días: %d\t Costo total: %8.2f", TRA, DIA, COS); // Muestra en pantalla la clave de tratamiento, los días y el costo total del tratamiento
+    }
+    else
+        printf("\nLa clave del tratamiento es incorrecta"); // Si la clave de tratamiento es incorrecta, muestra en pantalla "La clave del tratamiento es incorrecta"
+}
