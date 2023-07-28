@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+/* Incremento de salario. 
+El programa, al recibir como dato el nivel de un profesor, incrementa su
+salario en función de la tabla 2.3. 
+NIV: variable de tipo entero.
+SAL: variables de tipo real. */
+void main(void)
+{
+    float SAL; // Declaración de la variable SAL de tipo real (número decimal)
+    int NIV; // Declaración de la variable NIV de tipo entero
+    
+    printf("Ingrese el nivel académico del profesor: "); // Muestra un mensaje para que el usuario ingrese el nivel académico
+    scanf("%d", &NIV); // Lee el nivel académico ingresado por el usuario y lo almacena en la variable NIV
+    
+    printf("Ingrese el salario: "); // Muestra un mensaje para que el usuario ingrese el salario
+    scanf("%f", &SAL); // Lee el salario ingresado por el usuario y lo almacena en la variable SAL
+    
+    switch (NIV) // Comienza el bloque switch para evaluar el valor de la variable NIV
+    {
+        case 1: // Si NIV es igual a 1, se calcula el nuevo salario multiplicándolo por 1.0035 y se almacena en SAL
+            SAL = SAL * 1.0035;
+            break;
+        case 2: // Si NIV es igual a 2, se calcula el nuevo salario multiplicándolo por 1.0041 y se almacena en SAL
+            SAL = SAL * 1.0041;
+            break;
+        case 3: // Si NIV es igual a 3, se calcula el nuevo salario multiplicándolo por 1.0048 y se almacena en SAL
+            SAL = SAL * 1.0048;
+            break;
+        case 4: // Si NIV es igual a 4, se calcula el nuevo salario multiplicándolo por 1.0053 y se almacena en SAL
+            SAL = SAL * 1.0053;
+            break;
+    }
+    
+    printf("\n\nNivel: %d \tNuevo salario: %8.2f", NIV, SAL); // Muestra el nivel y el nuevo salario en pantalla con dos decimales
+}
