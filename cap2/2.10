@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+
+/* Par, impar o nulo.
+NUM: variable de tipo entero. */
+void main(void)
+{
+    int NUM; // Declaración de la variable NUM de tipo entero
+    
+    printf("Ingrese el número: "); // Muestra un mensaje para que el usuario ingrese el número
+    scanf("%d", &NUM); // Lee el número ingresado por el usuario y lo almacena en la variable NUM
+    
+    if (NUM == 0) // Comprueba si el número es igual a cero
+        printf("\nNulo"); // Si el número es cero, muestra en pantalla "Nulo"
+    else if (pow(-1, NUM) > 0) // Si el número no es cero, calcula el valor de -1 elevado a la potencia del número y comprueba si es mayor que cero
+        printf("\nPar"); // Si el resultado es mayor que cero, muestra en pantalla "Par"
+    else
+        printf("\nImpar"); // Si el resultado es menor o igual a cero, muestra en pantalla "Impar"
+}
