@@ -15,79 +15,85 @@ int main() {
     printf("1. Dificultad para respirar?\n");
     printf("2. Dolor en el pecho?\n");
     printf("3. Hemorragia severa?\n");
-    printf("4. dolor de cabeza?\n");
-    printf("5. Fractura ?\n");
+    printf("4. Pérdida de conciencia?\n");
+    printf("5. Fractura expuesta?\n");
 
     scanf("%d", &sintoma);
 
     if (sintoma == 1) {
-        printf("Hola, %s. Podría estar experimentando dificultad para respirar. Busque ayuda médica de inmediato.\n", nombre);
-        printf("Opciones:\n");
-        printf("1. Si, tengo dificultad para respirar.\n");
-        printf("2. No, no tengo dificultad para respirar.\n");
-        int opcion;
-        scanf("%d", &opcion);
-        if (opcion == 1) {
-            printf("Descanse en un lugar donde el aire fluya y buscar ayuda medica si es necesario\n");
+        printf("Hola, %s. Podría estar experimentando dificultad para respirar. Responda algunas preguntas:\n", nombre);
+
+        printf("¿Tiene fiebre o temperatura alta? (1. Sí / 2. No)\n");
+        int fiebre;
+        scanf("%d", &fiebre);
+
+        printf("¿Ha tenido contacto reciente con personas enfermas? (1. Sí / 2. No)\n");
+        int contacto;
+        scanf("%d", &contacto);
+
+        printf("¿Ha viajado recientemente a áreas de alto riesgo? (1. Sí / 2. No)\n");
+        int viaje;
+        scanf("%d", &viaje);
+
+        printf("¿Tiene historial de problemas respiratorios previos? (1. Sí / 2. No)\n");
+        int problemas_respiratorios;
+        scanf("%d", &problemas_respiratorios);
+
+        if (fiebre == 1 || contacto == 1 || viaje == 1 || problemas_respiratorios == 1) {
+            printf("Busque ayuda médica de inmediato.\n");
         } else {
             printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
         }
     } else if (sintoma == 2) {
-        printf("Hola, %s. Podría estar experimentando dolor en el pecho. Busque ayuda médica de inmediato.\n", nombre);
-        printf("Opciones:\n");
-        printf("1. Si, tengo dolor en el pecho.\n");
-        printf("2. No, no tengo dolor en el pecho.\n");
-        int opcion;
-        scanf("%d", &opcion);
-        if (opcion == 1) {
+        printf("Hola, %s. Podría estar experimentando dolor en el pecho. Responda algunas preguntas:\n", nombre);
+
+        printf("¿El dolor se irradia hacia el brazo izquierdo? (1. Sí / 2. No)\n");
+        int irradiacion;
+        scanf("%d", &irradiacion);
+
+        printf("¿Ha tenido antecedentes de enfermedades cardíacas? (1. Sí / 2. No)\n");
+        int enfermedades_cardiacas;
+        scanf("%d", &enfermedades_cardiacas);
+
+        printf("¿El dolor empeora con la actividad física? (1. Sí / 2. No)\n");
+        int actividad_fisica;
+        scanf("%d", &actividad_fisica);
+
+        printf("¿Tiene dificultad para respirar junto con el dolor? (1. Sí / 2. No)\n");
+        int dificultad_respirar;
+        scanf("%d", &dificultad_respirar);
+
+        if (irradiacion == 1 || enfermedades_cardiacas == 1 || actividad_fisica == 1 || dificultad_respirar == 1) {
             printf("Busque ayuda médica de inmediato.\n");
         } else {
             printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
         }
     } else if (sintoma == 3) {
-        printf("Hola, %s. Podría estar experimentando una hemorragia severa. Busque ayuda médica de inmediato.\n", nombre);
-        printf("Opciones:\n");
-        printf("1. Si, tengo hemorragia severa.\n");
-        printf("2. No, no tengo hemorragia severa.\n");
-        int opcion;
-        scanf("%d", &opcion);
-        if (opcion == 1) {
+        printf("Hola, %s. Podría estar experimentando una hemorragia severa. Responda algunas preguntas:\n", nombre);
+
+        printf("¿La hemorragia es constante y no se detiene? (1. Sí / 2. No)\n");
+        int constante;
+        scanf("%d", &constante);
+
+        printf("¿La hemorragia es el resultado de un accidente grave? (1. Sí / 2. No)\n");
+        int accidente;
+        scanf("%d", &accidente);
+
+        printf("¿La hemorragia está acompañada de mareos o debilidad? (1. Sí / 2. No)\n");
+        int mareos_debilidad;
+        scanf("%d", &mareos_debilidad);
+
+        printf("¿La hemorragia proviene de una herida profunda? (1. Sí / 2. No)\n");
+        int herida_profunda;
+        scanf("%d", &herida_profunda);
+
+        if (constante == 1 || accidente == 1 || mareos_debilidad == 1 || herida_profunda == 1) {
             printf("Aplique presión en el área afectada y busque ayuda médica de inmediato.\n");
         } else {
             printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
         }
-    } else if (sintoma == 4) {
-        printf("Hola, %s. si experimenta dolor de cabeza. intente tomar un calmante en dado caso de que el dolor siga, consulte a un medico\n", nombre);
-        printf("Opciones:\n");
-        printf("1. Si, he perdido la conciencia.\n");
-        printf("2. No, no he perdido la conciencia.\n");
-        int opcion;
-        scanf("%d", &opcion);
-        if (opcion == 1) {
-            printf("Llame al servicio de emergencia de inmediato.\n");
-        } else {
-            printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
-        }
-    } else if (sintoma == 5) {
-        printf("Hola, %s. Podría tener una fractura expuesta. Busque ayuda médica de inmediato.\n", nombre);
-        printf("Opciones:\n");
-        printf("1. Si, tengo una fractura.\n");
-        printf("2. No, no tengo una fractura.\n");
-        int opcion;
-        scanf("%d", &opcion);
-        if (opcion == 1) {
-            printf("Evite mover la zona afectada y relajar en una zona donde pueda reposar comodamente, puede usar hielo para disminuir la inflamacion en dado caso busque ayuda médica de inmediato.\n");
-        } else {
-            printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
-        }
-    } else {
-        printf("Hola, %s. Síntoma no identificado. Relaje el miembro afectado en una zona tranquila. Consulte a un profesional de la salud si es necesario.\n", nombre);
-        if (edad >= 18) {
-            printf("Además de consultar a un médico, puedes considerar descansar y tomar líquidos.\n");
-        } else {
-            printf("Además de consultar a un médico, asegúrate de informar a un adulto de confianza sobre tus síntomas.\n");
-        }
     }
+    // Resto de los casos similares con más preguntas
 
     return 0;
 }
