@@ -1,0 +1,93 @@
+#include <stdio.h>
+
+int main() {
+    char nombre[100];
+    int edad;
+    int sintoma;
+
+    printf("Ingrese su nombre: ");
+    scanf("%s", nombre);
+
+    printf("Ingrese su edad: ");
+    scanf("%d", &edad);
+
+    printf("Hola, %s. Ingrese el número del síntoma:\n", nombre);
+    printf("1. Dificultad para respirar?\n");
+    printf("2. Dolor en el pecho?\n");
+    printf("3. Hemorragia severa?\n");
+    printf("4. dolor de cabeza?\n");
+    printf("5. Fractura ?\n");
+
+    scanf("%d", &sintoma);
+
+    if (sintoma == 1) {
+        printf("Hola, %s. Podría estar experimentando dificultad para respirar. Busque ayuda médica de inmediato.\n", nombre);
+        printf("Opciones:\n");
+        printf("1. Si, tengo dificultad para respirar.\n");
+        printf("2. No, no tengo dificultad para respirar.\n");
+        int opcion;
+        scanf("%d", &opcion);
+        if (opcion == 1) {
+            printf("Descanse en un lugar donde el aire fluya y buscar ayuda medica si es necesario\n");
+        } else {
+            printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
+        }
+    } else if (sintoma == 2) {
+        printf("Hola, %s. Podría estar experimentando dolor en el pecho. Busque ayuda médica de inmediato.\n", nombre);
+        printf("Opciones:\n");
+        printf("1. Si, tengo dolor en el pecho.\n");
+        printf("2. No, no tengo dolor en el pecho.\n");
+        int opcion;
+        scanf("%d", &opcion);
+        if (opcion == 1) {
+            printf("Busque ayuda médica de inmediato.\n");
+        } else {
+            printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
+        }
+    } else if (sintoma == 3) {
+        printf("Hola, %s. Podría estar experimentando una hemorragia severa. Busque ayuda médica de inmediato.\n", nombre);
+        printf("Opciones:\n");
+        printf("1. Si, tengo hemorragia severa.\n");
+        printf("2. No, no tengo hemorragia severa.\n");
+        int opcion;
+        scanf("%d", &opcion);
+        if (opcion == 1) {
+            printf("Aplique presión en el área afectada y busque ayuda médica de inmediato.\n");
+        } else {
+            printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
+        }
+    } else if (sintoma == 4) {
+        printf("Hola, %s. si experimenta dolor de cabeza. intente tomar un calmante en dado caso de que el dolor siga, consulte a un medico\n", nombre);
+        printf("Opciones:\n");
+        printf("1. Si, he perdido la conciencia.\n");
+        printf("2. No, no he perdido la conciencia.\n");
+        int opcion;
+        scanf("%d", &opcion);
+        if (opcion == 1) {
+            printf("Llame al servicio de emergencia de inmediato.\n");
+        } else {
+            printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
+        }
+    } else if (sintoma == 5) {
+        printf("Hola, %s. Podría tener una fractura expuesta. Busque ayuda médica de inmediato.\n", nombre);
+        printf("Opciones:\n");
+        printf("1. Si, tengo una fractura.\n");
+        printf("2. No, no tengo una fractura.\n");
+        int opcion;
+        scanf("%d", &opcion);
+        if (opcion == 1) {
+            printf("Evite mover la zona afectada y relajar en una zona donde pueda reposar comodamente, puede usar hielo para disminuir la inflamacion en dado caso busque ayuda médica de inmediato.\n");
+        } else {
+            printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
+        }
+    } else {
+        printf("Hola, %s. Síntoma no identificado. Relaje el miembro afectado en una zona tranquila. Consulte a un profesional de la salud si es necesario.\n", nombre);
+        if (edad >= 18) {
+            printf("Además de consultar a un médico, puedes considerar descansar y tomar líquidos.\n");
+        } else {
+            printf("Además de consultar a un médico, asegúrate de informar a un adulto de confianza sobre tus síntomas.\n");
+        }
+    }
+
+    return 0;
+}
