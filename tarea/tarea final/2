@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    int sintoma;
+    char nombre[50]; // Para almacenar el nombre del usuario
+    int edad;        // Para almacenar la edad del usuario
+
+    printf("Ingrese su nombre: ");
+    scanf("%s", nombre);
+
+    printf("Ingrese su edad: ");
+    scanf("%d", &edad);
+
+    printf("Hola, %s. Ingrese el número del síntoma:\n", nombre);
+    printf("1. Dificultad para respirar\n");
+    printf("2. Dolor en el pecho\n");
+    printf("3. Hemorragia severa\n");
+    printf("4. Pérdida de conciencia\n");
+    printf("5. Fractura expuesta\n");
+
+    scanf("%d", &sintoma);
+
+    switch (sintoma) {
+        case 1:
+            printf("Hola, %s. Podría estar experimentando dificultad para respirar. Busque ayuda médica de inmediato.\n", nombre);
+            break;
+        case 2:
+            printf("Hola, %s. Podría estar experimentando dolor en el pecho. Busque ayuda médica de inmediato.\n", nombre);
+            break;
+        case 3:
+            printf("Hola, %s. Podría estar experimentando una hemorragia severa. Busque ayuda médica de inmediato.\n", nombre);
+            break;
+        case 4:
+            printf("Hola, %s. Podría haber perdido la conciencia. Busque ayuda médica de inmediato.\n", nombre);
+            break;
+        case 5:
+            printf("Hola, %s. Podría tener una fractura expuesta. Busque ayuda médica de inmediato.\n", nombre);
+            break;
+        default:
+            printf("Hola, %s. Síntoma no reconocido. Consulte a un profesional de la salud si es necesario.\n", nombre);
+            break;
+    }
+
+    return 0;
+}
