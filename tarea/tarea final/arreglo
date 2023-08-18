@@ -39,7 +39,11 @@ int main() {
         int problemas_respiratorios;
         scanf("%d", &problemas_respiratorios);
 
-        if (fiebre == 1 || contacto == 1 || viaje == 1 || problemas_respiratorios == 1) {
+        printf("¿Ha estado en lugares con aglomeraciones? (1. Sí / 2. No)\n");
+        int aglomeraciones;
+        scanf("%d", &aglomeraciones);
+
+        if (fiebre == 1 || contacto == 1 || viaje == 1 || problemas_respiratorios == 1 || aglomeraciones == 1) {
             printf("Busque ayuda médica de inmediato.\n");
         } else {
             printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
@@ -63,7 +67,11 @@ int main() {
         int dificultad_respirar;
         scanf("%d", &dificultad_respirar);
 
-        if (irradiacion == 1 || enfermedades_cardiacas == 1 || actividad_fisica == 1 || dificultad_respirar == 1) {
+        printf("¿El dolor aumenta al presionar el pecho? (1. Sí / 2. No)\n");
+        int presion_pecho;
+        scanf("%d", &presion_pecho);
+
+        if (irradiacion == 1 || enfermedades_cardiacas == 1 || actividad_fisica == 1 || dificultad_respirar == 1 || presion_pecho == 1) {
             printf("Busque ayuda médica de inmediato.\n");
         } else {
             printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
@@ -87,7 +95,11 @@ int main() {
         int herida_profunda;
         scanf("%d", &herida_profunda);
 
-        if (constante == 1 || accidente == 1 || mareos_debilidad == 1 || herida_profunda == 1) {
+        printf("¿Ha intentado aplicar presión en la zona afectada? (1. Sí / 2. No)\n");
+        int aplicado_presion;
+        scanf("%d", &aplicado_presion);
+
+        if (constante == 1 || accidente == 1 || mareos_debilidad == 1 || herida_profunda == 1 || aplicado_presion == 1) {
             printf("Aplique presión en el área afectada y busque ayuda médica de inmediato.\n");
         } else {
             printf("Consulte a un profesional de la salud si los síntomas empeoran.\n");
@@ -96,4 +108,3 @@ int main() {
     // Resto de los casos similares con más preguntas
 
     return 0;
-}
